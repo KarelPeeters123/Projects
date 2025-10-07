@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quick Links — Prayer Times & QR Scanner</title>
+  <meta name="description" content="A simple link hub with attractive link cards for a prayer times site and a QR scanner app." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:linear-gradient(135deg,#6ee7b7 0%,#3b82f6 100%);
+      --glass: rgba(255,255,255,0.04);
+      --muted: #9aa4b2;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;background:radial-gradient(1000px 600px at 10% 10%, rgba(59,130,246,0.08), transparent), var(--bg); color:#e6eef8; -webkit-font-smoothing:antialiased}
+    header{padding:28px 20px; text-align:center}
+    h1{margin:0;font-size:1.25rem; letter-spacing: -0.02em}
+    .wrap{max-width:980px;margin:18px auto;padding:0 20px}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:20px}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);padding:18px;border-radius:14px;display:flex;align-items:center;gap:14px;transition:transform .18s ease, box-shadow .18s ease;cursor:pointer;text-decoration:none;color:inherit}
+    .card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+    .iconwrap{width:72px;height:72px;flex:0 0 72px;border-radius:12px;display:grid;place-items:center;background:var(--glass);backdrop-filter:blur(6px);}
+    .content{flex:1}
+    .title{font-weight:700;font-size:1.05rem;margin:0 0 6px}
+    .desc{margin:0;color:var(--muted);font-size:0.95rem}
+    .badge{font-size:0.78rem;padding:6px 8px;border-radius:999px;background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));color:var(--muted);display:inline-block;margin-left:8px}
+
+    /* subtle decorative background shapes */
+    .hero{position:relative;padding:28px;border-radius:14px;background:linear-gradient(180deg, rgba(59,130,246,0.06), transparent);overflow:hidden}
+    .hero:after{content:"";position:absolute;right:-120px;top:-60px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle at 20% 20%, rgba(110,231,183,0.08), rgba(59,130,246,0.03));}
+
+    footer{color:var(--muted);text-align:center;padding:28px 20px;font-size:0.9rem}
+
+    /* accessibility focus */
+    .card:focus{outline:3px solid rgba(59,130,246,0.28);outline-offset:3px}
+
+    @media (max-width:420px){.iconwrap{width:60px;height:60px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Quick Links</h1>
+      <p style="color:var(--muted);margin-top:8px">Tap a card to open the site — designed to be simple, responsive and accessible.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="grid" role="list">
+
+        <!-- Prayer times card -->
+        <a class="card" href="https://example-prayertimes.com" role="listitem" target="_blank" rel="noopener noreferrer" aria-labelledby="pt-title">
+          <div class="iconwrap" aria-hidden="true">
+            <!-- mosque + clock SVG -->
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <defs>
+                <linearGradient id="g1" x1="0" x2="1">
+                  <stop offset="0" stop-color="#6ee7b7"/>
+                  <stop offset="1" stop-color="#3b82f6"/>
+                </linearGradient>
+              </defs>
+              <rect x="1" y="9" width="22" height="12" rx="2" stroke="url(#g1)" stroke-width="1.2" />
+              <path d="M12 3c2 1.6 4 2.8 4 4.6 0 1.9-1.6 3.4-4 4.4-2.4-1-4-2.5-4-4.4C8 5.8 10 4.6 12 3z" stroke="url(#g1)" stroke-width="1.2" fill="none"/>
+              <circle cx="17" cy="14" r="3" stroke="url(#g1)" stroke-width="1.2" />
+              <path d="M17.5 14v-2h-1" stroke="url(#g1)" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <div class="content">
+            <div style="display:flex;align-items:center;">
+              <h2 id="pt-title" class="title">Prayer Times</h2>
+              <span class="badge">External</span>
+            </div>
+            <p class="desc">Up-to-date daily prayer times and Qibla direction. Opens in a new tab.</p>
+          </div>
+        </a>
+
+        <!-- QR Scanner card -->
+        <a class="card" href="https://example-qrscanner.app" role="listitem" target="_blank" rel="noopener noreferrer" aria-labelledby="qr-title">
+          <div class="iconwrap" aria-hidden="true">
+            <!-- QR + mobile SVG -->
+            <svg width="44" height="44" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <defs>
+                <linearGradient id="g2" x1="0" x2="1">
+                  <stop offset="0" stop-color="#f0abfc"/>
+                  <stop offset="1" stop-color="#60a5fa"/>
+                </linearGradient>
+              </defs>
+              <rect x="2" y="3" width="20" height="18" rx="2" stroke="url(#g2)" stroke-width="1.2" fill="none" />
+              <rect x="6" y="7" width="3" height="3" fill="url(#g2)"/>
+              <rect x="11" y="7" width="3" height="3" fill="url(#g2)"/>
+              <rect x="6" y="12" width="3" height="3" fill="url(#g2)"/>
+              <rect x="11" y="12" width="3" height="3" fill="url(#g2)"/>
+              <path d="M17 7h.01M17 12h.01" stroke="url(#g2)" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <div class="content">
+            <div style="display:flex;align-items:center;">
+              <h2 id="qr-title" class="title">QR Scanner App</h2>
+              <span class="badge">External</span>
+            </div>
+            <p class="desc">Scan QR codes fast — links to the app download / web scanner.</p>
+          </div>
+        </a>
+
+      </div>
+
+      <p style="color:var(--muted);margin-top:14px;font-size:0.95rem">Tip: replace the example links with the real URLs you want to point to. Cards are keyboard-accessible and open in a new tab.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Made with ❤️ — tell me if you want different colours, icons, or more cards.</div>
+  </footer>
+</body>
+</html>
