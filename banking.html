@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banking & Finance</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="wrap" style="text-align: center;">
+      <a href="index.html" class="back-link" style="display: block; text-align: left; margin-bottom: 20px;">← Back to Dashboard</a>
+      <h1>Banking & Finance</h1>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <nav class="cards" role="list">
+
+      <!-- Google Drive Finances card -->
+      <a class="card" href="https://docs.google.com/spreadsheets/d/1UjcPAgaTrdYjSnZiha8FZc7WQJ0-5nJG7h4JqGA2UPY/edit?usp=sharing" role="listitem" target="_blank"
+        rel="noopener noreferrer" aria-labelledby="finances-title">
+        <div class="iconwrap" aria-hidden="true">
+          <!-- Line Graph icon -->
+          <svg width="44" height="44" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="drive-gradient" x1="0" x2="1">
+                <stop offset="0" stop-color="#f0abfc" />
+                <stop offset="1" stop-color="#60a5fa" />
+              </linearGradient>
+            </defs>
+            <!-- Graph data line -->
+            <polyline points="3,18 6,14 9,16 12,10 15,12 18,6 21,8" 
+                      stroke="url(#drive-gradient)" 
+                      stroke-width="2" 
+                      fill="none" 
+                      stroke-linecap="round" 
+                      stroke-linejoin="round"/>
+            <!-- Data points -->
+            <circle cx="3" cy="18" r="1.5" fill="url(#drive-gradient)"/>
+            <circle cx="6" cy="14" r="1.5" fill="url(#drive-gradient)"/>
+            <circle cx="9" cy="16" r="1.5" fill="url(#drive-gradient)"/>
+            <circle cx="12" cy="10" r="1.5" fill="url(#drive-gradient)"/>
+            <circle cx="15" cy="12" r="1.5" fill="url(#drive-gradient)"/>
+            <circle cx="18" cy="6" r="1.5" fill="url(#drive-gradient)"/>
+            <circle cx="21" cy="8" r="1.5" fill="url(#drive-gradient)"/>
+          </svg>
+        </div>
+
+        <div class="content">
+          <h2 id="finances-title" class="title">Finance Documents</h2>
+          <p class="desc">Access financial spreadsheets and documents</p>
+        </div>
+      </a>
+
+      <!-- Kiwibank Internet Banking card -->
+      <a class="card" href="https://www.ib.kiwibank.co.nz/" target="_blank"
+        rel="noopener noreferrer" aria-labelledby="kiwibank-title">
+        <div class="iconwrap" aria-hidden="true">
+          <!-- Gold (Au) icon -->
+          <svg width="44" height="44" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="kiwi-gradient" x1="0" x2="1">
+                <stop offset="0" stop-color="#f0abfc" />
+                <stop offset="1" stop-color="#60a5fa" />
+              </linearGradient>
+            </defs>
+            <!-- Square background -->
+            <rect x="3" y="3" width="18" height="18" stroke="url(#kiwi-gradient)" stroke-width="2" fill="none"/>
+            <!-- "Kb" text for Kiwibank -->
+            <text x="12" y="16" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="url(#kiwi-gradient)" text-anchor="middle">Kb</text>
+          </svg>
+        </div>
+
+        <div class="content">
+          <h2 id="kiwibank-title" class="title">Kiwibank Online</h2>
+          <p class="desc">Access your Kiwibank internet banking</p>
+        </div>
+      </a>
+
+    </nav>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Banking & Finance Dashboard
+    </div>
+  </footer>
+</body>
+
+</html>
